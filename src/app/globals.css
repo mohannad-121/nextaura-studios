@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-ivory: #FAF9F6;
+    --bg-warm: #FFFDFC;
+    --bg-platinum: #F4F4F2;
+    --bg-silver: #ECECEA;
+    --bg-pure: #FFFFFF;
+
+    --fg-deep: #151515;
+    --fg-charcoal: #181818;
+    --fg-muted: #666462;
+    --fg-subtle: #969490;
+
+    --crimson: #A90F24;
+    --crimson-vivid: #C31531;
+    --crimson-dark: #7A0817;
+    --orange: #FF6A1A;
+    --orange-vivid: #FF7424;
+    --orange-warm: #F05A18;
+    --solar-highlight: #FFB24A;
+    --solar-glow: rgba(255, 106, 26, 0.18);
+
+    --border-light: rgba(21, 21, 21, 0.08);
+    --border-card: rgba(21, 21, 21, 0.06);
+    --border-solar: rgba(255, 106, 26, 0.28);
+    --border-crimson: rgba(169, 15, 36, 0.2);
+
+    --font-heading: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+    --font-body: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    border-color: var(--border-light);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-ivory);
+    color: var(--fg-deep);
+  }
+
+  body {
+    background-color: var(--bg-ivory);
+    color: var(--fg-deep);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #A90F24;
+    color: #FFFDFC;
+  }
+}
+
+/* Solar Aura Gradients & Textures */
+.solar-gradient {
+  background: linear-gradient(135deg, #A90F24 0%, #D52632 45%, #FF6A1A 100%);
+}
+
+.solar-gradient-subtle {
+  background: linear-gradient(135deg, rgba(169, 15, 36, 0.06) 0%, rgba(255, 106, 26, 0.08) 100%);
+}
+
+.solar-text-gradient {
+  background: linear-gradient(135deg, #A90F24 0%, #D52632 40%, #FF6A1A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solar-glow-effect {
+  box-shadow: 0 0 50px -10px rgba(255, 106, 26, 0.25), 0 0 20px -5px rgba(169, 15, 36, 0.2);
+}
+
+.solar-glow-card {
+  box-shadow: 0 10px 30px -10px rgba(21, 21, 21, 0.04), 0 0 20px -8px rgba(255, 106, 26, 0.12);
+}
+
+/* Subtle fine noise / platinum grid texture */
+.bg-solar-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(21, 21, 21, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(21, 21, 21, 0.03) 1px, transparent 1px);
+}
+
+.bg-noise-subtle {
+  background-image: radial-gradient(rgba(21, 21, 21, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Traveling light energy animation on button */
+@keyframes solarSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.solar-sweep-anim {
+  animation: solarSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Orbit rotations */
+@keyframes solarOrbitSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes solarOrbitReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-orbit-slow {
+  animation: solarOrbitSlow 32s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: solarOrbitReverse 24s linear infinite;
+}
+
+.animate-pulse-subtle {
+  animation: solarPulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes solarPulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+}
+
+/* Respect user's motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
