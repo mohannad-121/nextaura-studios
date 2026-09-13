@@ -14,7 +14,6 @@ interface MobileMenuProps {
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Selected Works", href: "/projects" },
   { label: "The Studio", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

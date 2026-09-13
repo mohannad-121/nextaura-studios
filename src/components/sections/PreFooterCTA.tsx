@@ -35,10 +35,6 @@ export function PreFooterCTA() {
           <AuraButton href="/contact" variant="primary" size="lg" showArrow>
             Start a Project
           </AuraButton>
-
-          <AuraButton href="/projects" variant="secondary" size="lg">
-            Browse Archive
-          </AuraButton>
         </div>
 
         <p className="mt-8 text-xs font-mono text-[#D4AF37] font-semibold tracking-wider">

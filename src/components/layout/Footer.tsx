@@ -4,7 +4,6 @@ import { ArrowUpRight } from "lucide-react";
 
 const FOOTER_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Selected Works", href: "/projects" },
   { label: "The Studio", href: "/about" },
   { label: "Collaborate", href: "/contact" },
 ];
