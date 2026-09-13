@@ -61,7 +61,7 @@ export function Navbar() {
 
             <div className="flex flex-col">
               <span className="font-heading font-black text-base sm:text-lg tracking-tight text-[#151515] leading-none">
-                NEXTAURA
+                NEXT<span className="solar-text-gradient">AURA</span>
               </span>
               <span className="text-[9px] font-mono tracking-[0.25em] text-[#A90F24] font-bold uppercase leading-tight mt-0.5">
                 STUDIOS

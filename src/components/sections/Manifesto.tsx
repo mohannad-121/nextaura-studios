@@ -48,7 +48,7 @@ export function Manifesto() {
         <div className="mt-16 sm:mt-24 pt-8 border-t border-black/8 max-w-sm mx-auto flex items-center justify-center gap-4">
           <span className="w-8 h-px bg-[#FF6A1A]" />
           <span className="font-mono text-xs tracking-widest uppercase text-[#666462]">
-            NEXTAURA STUDIOS · MANIFESTO
+            NEXT<span className="solar-text-gradient font-bold">AURA</span> STUDIOS · MANIFESTO
           </span>
           <span className="w-8 h-px bg-[#FF6A1A]" />
         </div>

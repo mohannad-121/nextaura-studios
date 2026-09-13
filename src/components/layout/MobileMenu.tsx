@@ -60,7 +60,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-black text-xl tracking-tight text-[#151515]">
-              NEXTAURA
+              NEXT<span className="solar-text-gradient">AURA</span>
             </span>
             <span className="text-[10px] font-mono tracking-[0.2em] text-[#FF6A1A] uppercase">
               STUDIOS
@@ -107,7 +107,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </AuraButton>
 
         <div className="text-xs text-[#666462]">
-          <p className="font-medium text-[#151515]">NEXTAURA STUDIOS</p>
+          <p className="font-medium text-[#151515]">NEXT<span className="solar-text-gradient font-bold">AURA</span> STUDIOS</p>
           <p className="text-[11px] text-[#969490]">Part of the NextAura ecosystem</p>
         </div>
       </div>

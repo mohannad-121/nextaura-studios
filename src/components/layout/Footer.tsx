@@ -96,8 +96,8 @@ export function Footer() {
 
         {/* Sculptural Giant Wordmark */}
         <div className="py-12 sm:py-16 text-center select-none overflow-hidden">
-          <h2 className="font-heading font-black text-[clamp(2.8rem,11.5vw,11.5rem)] tracking-tighter leading-none text-[#151515]/90 hover:text-[#151515] transition-colors duration-500">
-            NEXTAURA
+          <h2 className="font-heading font-black text-[clamp(2.8rem,11.5vw,11.5rem)] tracking-tighter leading-none text-[#151515]">
+            NEXT<span className="solar-text-gradient">AURA</span>
           </h2>
           <div className="flex items-center justify-center gap-3 sm:gap-6 mt-1">
             <div className="h-px bg-gradient-to-r from-transparent via-[#FF6A1A]/40 to-transparent flex-1 max-w-xs" />
@@ -112,7 +112,7 @@ export function Footer() {
         <div className="pt-8 border-t border-black/8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#666462]">
           <p>© {currentYear} NextAura Studios. All rights reserved.</p>
           <p className="font-medium text-[#151515]">
-            Part of the <span className="text-[#A90F24]">NextAura</span> ecosystem.
+            Part of the <span className="font-bold text-[#151515]">NEXT<span className="solar-text-gradient">AURA</span></span> ecosystem.
           </p>
         </div>
       </div>
