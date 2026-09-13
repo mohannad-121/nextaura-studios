@@ -67,7 +67,7 @@ export function AuraButton({
       <span className="relative z-10 flex items-center gap-2">
         {children}
         {showArrow && (
-          <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-current" />
+          <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5 text-current" />
         )}
       </span>
     </>

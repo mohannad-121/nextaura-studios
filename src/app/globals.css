@@ -33,6 +33,7 @@
     --font-heading: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
     --font-body: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
     --font-serif: var(--font-cormorant), Georgia, serif;
+    --font-arabic: var(--font-cairo), system-ui, -apple-system, sans-serif;
   }
 
   * {
@@ -52,6 +53,21 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  [dir="rtl"],
+  [dir="rtl"] body {
+    font-family: var(--font-arabic);
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6,
+  [dir="rtl"] .font-heading {
+    font-family: var(--font-arabic);
   }
 
   ::selection {

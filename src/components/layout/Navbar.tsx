@@ -5,17 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AuraButton } from "@/components/ui/AuraButton";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileMenu } from "./MobileMenu";
+import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
-
-const NAV_ITEMS = [
-  { label: "Home", href: "/" },
-  { label: "Studio", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
 
 export function Navbar() {
   const pathname = usePathname();
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -23,7 +20,7 @@ export function Navbar() {
   useEffect(() => {
     setMounted(true);
     const handleScroll = () => {
-      // Reveal navbar only after scrolling ~220px (5-8% into the Home experience)
+      // Reveal navbar only after scrolling ~220px on Home page, or 20px on other pages
       const threshold = pathname === "/" ? 220 : 20;
       setIsScrolled(window.scrollY > threshold);
     };
@@ -32,6 +29,12 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
+
+  const navItems = [
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.studio, href: "/about" },
+    { label: t.nav.contact, href: "/contact" },
+  ];
 
   // On initial SSR and on Home page before scrolling, navbar is completely hidden
   const isHome = !mounted || pathname === "/" || pathname === "";
@@ -42,7 +45,7 @@ export function Navbar() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-4 sm:px-8",
-          isScrolled ? "py-2.5 sm:py-3" : "py-4 sm:py-5",
+          isScrolled ? "py-2 sm:py-2.5" : "py-4 sm:py-5",
           shouldShowNav
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-8 pointer-events-none"
@@ -81,7 +84,7 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-1 bg-black/4 p-1 rounded-full border border-black/5">
-            {NAV_ITEMS.map((item) => {
+            {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
@@ -106,22 +109,26 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Desktop CTA Button */}
+          {/* Desktop Actions: Language Switcher & Start a Project CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <AuraButton href="/contact" variant="primary" size="sm" showArrow>
-              Start a Project
+            <LanguageSwitcher />
+            <AuraButton href="/start-project" variant="primary" size="sm" showArrow>
+              {t.nav.startProject}
             </AuraButton>
           </div>
 
-          {/* Mobile Animated Trigger Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open mobile navigation menu"
-            className="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-full border border-black/10 bg-white/80 active:scale-95 transition-all"
-          >
-            <span className="w-5 h-0.5 bg-[#151515] rounded-full transition-all" />
-            <span className="w-3.5 h-0.5 bg-[#A90F24] rounded-full self-end mr-2.5 transition-all" />
-          </button>
+          {/* Mobile Actions: Language Switcher & Hamburger */}
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Open mobile navigation menu"
+              className="flex flex-col justify-center items-center gap-1.5 w-9 h-9 rounded-full border border-black/10 bg-white/80 active:scale-95 transition-all"
+            >
+              <span className="w-4.5 h-0.5 bg-[#151515] rounded-full transition-all" />
+              <span className="w-3 h-0.5 bg-[#A90F24] rounded-full self-end mr-2 transition-all" />
+            </button>
+          </div>
         </div>
       </header>
 

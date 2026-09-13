@@ -562,7 +562,7 @@ export function SignalExperience() {
           We build digital products, kinetic experiences, and games that people genuinely want to touch and remember.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <AuraButton href="/contact" variant="primary" showArrow>
+          <AuraButton href="/start-project" variant="primary" showArrow>
             Start a Project
           </AuraButton>
           <AuraButton href="/about" variant="secondary">
@@ -959,7 +959,7 @@ export function SignalExperience() {
 
           {/* CTA Buttons */}
           <div ref={finalCtaRef} className="flex flex-col sm:flex-row items-center gap-4">
-            <AuraButton href="/contact" variant="primary" size="lg" showArrow>
+            <AuraButton href="/start-project" variant="primary" size="lg" showArrow>
               Start a Project
             </AuraButton>
             <Link

@@ -1,7 +1,13 @@
+"use client";
+
 import React from "react";
 import { AuraButton } from "@/components/ui/AuraButton";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function PreFooterCTA() {
+  const { language } = useLanguage();
+  const isAr = language === "ar";
+
   return (
     <section className="relative py-28 sm:py-40 bg-[#FFFDFC] overflow-hidden border-b border-black/8 text-center">
       {/* Dynamic Luminous Solar Aura Flare Background */}
@@ -15,30 +21,41 @@ export function PreFooterCTA() {
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#D4AF37]/35 shadow-xs mb-8 backdrop-blur-md">
           <span className="w-2.5 h-2.5 rounded-full bg-[#FF6A1A] animate-ping" />
           <span className="text-xs font-mono tracking-[0.22em] uppercase text-[#151515] font-bold">
-            NextAura Collaboration
+            {isAr ? "تعاون نكست أورا" : "NextAura Collaboration"}
           </span>
         </div>
 
         {/* Monumental Editorial Headline */}
         <h2 className="font-heading font-black text-[clamp(2.4rem,6vw,5.2rem)] tracking-tight leading-[1.05] text-[#151515] uppercase max-w-3xl">
-          Got an idea worth <span className="font-serif-luxury capitalize italic solar-text-gradient font-bold">Building?</span>
+          {isAr ? (
+            <>
+              هل لديك فكرة تستحق <span className="solar-text-gradient font-bold">التنفيذ؟</span>
+            </>
+          ) : (
+            <>
+              Got an idea worth <span className="font-serif-luxury capitalize italic solar-text-gradient font-bold">Building?</span>
+            </>
+          )}
         </h2>
 
         {/* Supporting Copy */}
         <p className="mt-6 text-base sm:text-xl text-[#666462] max-w-xl leading-relaxed">
-          From first sketch to final screen, let’s turn it into something people want to use, play
-          and remember.
+          {isAr
+            ? "من المخطط الأول إلى المنتج النهائي، لنحولها إلى تجربة رقمية استثنائية."
+            : "From first sketch to final screen, let’s turn it into something people want to use, play and remember."}
         </p>
 
         {/* Action Button */}
         <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center gap-4">
-          <AuraButton href="/contact" variant="primary" size="lg" showArrow>
-            Start a Project
+          <AuraButton href="/start-project" variant="primary" size="lg" showArrow>
+            {isAr ? "ابدأ مشروعك" : "Start a Project"}
           </AuraButton>
         </div>
 
         <p className="mt-8 text-xs font-mono text-[#D4AF37] font-semibold tracking-wider">
-          Direct studio inquiry · Response within 24 hours
+          {isAr
+            ? "إرسال مباشر للاستوديو · الرد خلال ساعة واحدة كحد أقصى"
+            : "Direct studio inquiry · Response within 1 hour guarantee"}
         </p>
       </div>
     </section>
