@@ -18,36 +18,41 @@ export function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 24);
+      // Reveal navbar only after scrolling ~220px (5-8% into the Home experience)
+      const threshold = pathname === "/" ? 220 : 20;
+      setIsScrolled(window.scrollY > threshold);
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
-  const isHome = pathname === "/";
+  // On initial SSR and on Home page before scrolling, navbar is completely hidden
+  const isHome = !mounted || pathname === "/" || pathname === "";
   const shouldShowNav = !isHome || isScrolled;
 
   return (
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-500 px-4 sm:px-8",
-          isScrolled ? "py-3" : "py-5 sm:py-6",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-4 sm:px-8",
+          isScrolled ? "py-2.5 sm:py-3" : "py-4 sm:py-5",
           shouldShowNav
             ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
+            : "opacity-0 -translate-y-8 pointer-events-none"
         )}
       >
         <div
           className={cn(
-            "max-w-7xl mx-auto flex items-center justify-between rounded-full transition-all duration-500 px-5 sm:px-7",
+            "max-w-6xl mx-auto flex items-center justify-between rounded-full transition-all duration-500 px-4 sm:px-6",
             isScrolled
-              ? "bg-[#FFFDFC]/90 backdrop-blur-xl border border-[#D4AF37]/35 shadow-[0_10px_30px_-5px_rgba(212,175,55,0.15),0_0_20px_rgba(169,15,36,0.1)] py-2.5"
+              ? "bg-[#FFFDFC]/95 backdrop-blur-xl border border-[#D4AF37]/35 shadow-[0_10px_30px_-5px_rgba(212,175,55,0.15),0_0_20px_rgba(169,15,36,0.1)] py-2"
               : "bg-transparent border border-transparent py-1"
           )}
         >
