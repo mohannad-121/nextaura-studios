@@ -21,10 +21,10 @@ export function Manifesto() {
 
       <div className="max-w-6xl mx-auto px-6 sm:px-10 relative z-10 text-center">
         {/* Top Section Tag */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-xs mb-12 sm:mb-16">
-          <span className="w-2 h-2 rounded-full bg-[#A90F24]" />
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#D4AF37]/35 shadow-xs mb-12 sm:mb-16 backdrop-blur-md">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#A90F24]" />
           <span className="text-xs font-mono tracking-[0.25em] uppercase text-[#151515] font-bold">
-            The NextAura Approach
+            The NextAura Manifesto
           </span>
         </div>
 
@@ -33,9 +33,9 @@ export function Manifesto() {
           {LINES.map((line, idx) => (
             <p
               key={idx}
-              className={`font-heading font-black text-[clamp(1.8rem,4.4vw,3.8rem)] tracking-tight leading-[1.12] transition-colors duration-500 ${
+              className={`font-serif-luxury text-[clamp(2.2rem,5vw,4.5rem)] tracking-tight leading-[1.08] transition-colors duration-500 ${
                 line.highlight
-                  ? "solar-text-gradient drop-shadow-xs"
+                  ? "solar-text-gradient drop-shadow-sm italic font-bold"
                   : "text-[#151515] hover:text-[#A90F24]"
               }`}
             >
@@ -45,12 +45,12 @@ export function Manifesto() {
         </div>
 
         {/* Studio Signature */}
-        <div className="mt-16 sm:mt-24 pt-8 border-t border-black/8 max-w-sm mx-auto flex items-center justify-center gap-4">
-          <span className="w-8 h-px bg-[#FF6A1A]" />
-          <span className="font-mono text-xs tracking-widest uppercase text-[#666462]">
+        <div className="mt-16 sm:mt-24 pt-8 border-t border-[#D4AF37]/25 max-w-md mx-auto flex items-center justify-center gap-4">
+          <span className="w-10 h-0.5 bg-[#D4AF37]" />
+          <span className="font-mono text-xs tracking-[0.25em] uppercase text-[#666462]">
             NEXT<span className="solar-text-gradient font-bold">AURA</span> STUDIOS · MANIFESTO
           </span>
-          <span className="w-8 h-px bg-[#FF6A1A]" />
+          <span className="w-10 h-0.5 bg-[#D4AF37]" />
         </div>
       </div>
     </section>

@@ -61,37 +61,61 @@ export function WhyStudio() {
             return (
               <div
                 key={principle.num}
-                className="group relative flex flex-col justify-between p-8 rounded-2xl bg-white border border-black/8 hover:border-[#FF6A1A]/35 transition-all duration-500 hover:shadow-[0_16px_36px_rgba(21,21,21,0.04)]"
+                className="group relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-white via-[#FFFDFC] to-orange-50/20 border border-black/10 hover:border-[#FF6A1A]/60 overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_-10px_rgba(255,106,26,0.16),0_0_25px_rgba(169,15,36,0.1)]"
               >
-                <div>
-                  {/* Top Bar with Number & Icon */}
-                  <div className="flex items-center justify-between pb-6 mb-6 border-b border-black/6">
-                    <span className="font-mono text-2xl font-bold tracking-tight text-[#151515] group-hover:text-[#A90F24] transition-colors">
-                      {principle.num}
-                    </span>
-                    <div className="w-9 h-9 rounded-full bg-[#FAF9F6] border border-black/8 flex items-center justify-center text-[#151515] group-hover:bg-[#A90F24]/10 group-hover:text-[#A90F24] transition-colors">
-                      <Icon className="w-4 h-4" />
+                {/* Top Accent Line */}
+                <div
+                  className="h-1.5 w-full bg-gradient-to-r"
+                  style={{
+                    backgroundImage: `linear-gradient(90deg, ${principle.accent} 0%, #FF6A1A 60%, #FFB24A 100%)`,
+                  }}
+                  aria-hidden="true"
+                />
+
+                <div className="p-8 flex flex-col justify-between flex-1 relative z-10">
+                  <div>
+                    {/* Top Bar with Number & Icon */}
+                    <div className="flex items-center justify-between pb-6 mb-6 border-b border-black/8">
+                      <span className="font-mono text-3xl font-black tracking-tight solar-text-gradient">
+                        {principle.num}
+                      </span>
+                      <div
+                        className="w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 shadow-xs group-hover:scale-110"
+                        style={{
+                          backgroundColor: `${principle.accent}15`,
+                          color: principle.accent,
+                          border: `1px solid ${principle.accent}30`,
+                        }}
+                      >
+                        <Icon className="w-4.5 h-4.5" />
+                      </div>
                     </div>
+
+                    <span
+                      className="text-xs font-mono font-bold uppercase tracking-widest block mb-2"
+                      style={{ color: principle.accent }}
+                    >
+                      {principle.subtitle}
+                    </span>
+
+                    <h3 className="font-heading font-bold text-2xl tracking-tight text-[#151515] group-hover:text-[#A90F24] transition-colors mb-4">
+                      {principle.title}
+                    </h3>
+
+                    <p className="text-sm text-[#666462] leading-relaxed">
+                      {principle.description}
+                    </p>
                   </div>
 
-                  <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] block mb-2">
-                    {principle.subtitle}
-                  </span>
-
-                  <h3 className="font-heading font-bold text-2xl tracking-tight text-[#151515] mb-4">
-                    {principle.title}
-                  </h3>
-
-                  <p className="text-sm text-[#666462] leading-relaxed">
-                    {principle.description}
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-black/5 flex items-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-[#FF6A1A]" />
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#969490]">
-                    Core Pillar
-                  </span>
+                  <div className="mt-8 pt-4 border-t border-black/8 flex items-center gap-2">
+                    <span
+                      className="w-2 h-2 rounded-full shadow-xs"
+                      style={{ backgroundColor: principle.accent }}
+                    />
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#151515]">
+                      Core Pillar
+                    </span>
+                  </div>
                 </div>
               </div>
             );

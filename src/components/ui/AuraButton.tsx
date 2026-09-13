@@ -39,9 +39,9 @@ export function AuraButton({
 
   const variantClasses = {
     primary:
-      "bg-[#A90F24] hover:bg-[#B5122B] text-white shadow-sm hover:shadow-[0_8px_25px_rgba(255,106,26,0.3)] active:scale-[0.98]",
+      "bg-gradient-to-r from-[#A90F24] via-[#D52632] to-[#FF6A1A] hover:from-[#C31531] hover:to-[#FF7424] text-white border border-[#D4AF37]/30 shadow-md hover:shadow-[0_10px_30px_rgba(212,175,55,0.25),0_0_20px_rgba(169,15,36,0.3)] active:scale-[0.98]",
     secondary:
-      "bg-white/80 hover:bg-white text-[#151515] border border-black/10 hover:border-[#FF6A1A]/40 shadow-xs hover:shadow-[0_4px_16px_rgba(21,21,21,0.06)] active:scale-[0.98]",
+      "bg-white/90 hover:bg-white text-[#151515] border border-[#D4AF37]/35 hover:border-[#D4AF37]/80 shadow-xs hover:shadow-[0_6px_20px_rgba(212,175,55,0.18)] active:scale-[0.98] backdrop-blur-md",
     ghost:
       "bg-transparent text-[#151515] hover:text-[#A90F24] hover:bg-black/5 active:scale-[0.98]",
   };

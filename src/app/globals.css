@@ -16,6 +16,8 @@
     --crimson: #A90F24;
     --crimson-vivid: #C31531;
     --crimson-dark: #7A0817;
+    --gold-burnished: #D4AF37;
+    --gold-light: #F3E5AB;
     --orange: #FF6A1A;
     --orange-vivid: #FF7424;
     --orange-warm: #F05A18;
@@ -23,12 +25,14 @@
     --solar-glow: rgba(255, 106, 26, 0.18);
 
     --border-light: rgba(21, 21, 21, 0.08);
-    --border-card: rgba(21, 21, 21, 0.06);
+    --border-card: rgba(212, 175, 55, 0.18);
     --border-solar: rgba(255, 106, 26, 0.28);
-    --border-crimson: rgba(169, 15, 36, 0.2);
+    --border-crimson: rgba(169, 15, 36, 0.25);
+    --border-gold: rgba(212, 175, 55, 0.35);
 
     --font-heading: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
     --font-body: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+    --font-serif: var(--font-cormorant), Georgia, serif;
   }
 
   * {
@@ -57,23 +61,41 @@
   }
 }
 
-/* Solar Aura Gradients & Textures */
+/* Luxury & Solar Aura Gradients & Textures */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
 .solar-gradient {
-  background: linear-gradient(135deg, #A90F24 0%, #D52632 45%, #FF6A1A 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #A90F24 40%, #FF6A1A 100%);
+}
+
+.gold-metallic-gradient {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
 }
 
 .solar-gradient-subtle {
-  background: linear-gradient(135deg, rgba(169, 15, 36, 0.06) 0%, rgba(255, 106, 26, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(169, 15, 36, 0.06) 45%, rgba(255, 106, 26, 0.08) 100%);
 }
 
 .solar-text-gradient {
-  background: linear-gradient(135deg, #A90F24 0%, #D52632 40%, #FF6A1A 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #FF6A1A 45%, #A90F24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #BF953F 0%, #FBF5B7 50%, #AA771C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .solar-glow-effect {
   box-shadow: 0 0 50px -10px rgba(255, 106, 26, 0.25), 0 0 20px -5px rgba(169, 15, 36, 0.2);
+}
+
+.luxury-card-shadow {
+  box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.12), 0 0 30px rgba(169, 15, 36, 0.12);
 }
 
 .solar-glow-card {

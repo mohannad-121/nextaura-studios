@@ -85,45 +85,53 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Column: Direct Studio Contact Info */}
           <div className="lg:col-span-4 space-y-8">
-            <div className="p-8 rounded-2xl bg-white border border-black/8 shadow-xs">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] font-bold block mb-4">
-                Direct Channel
-              </span>
+            <div className="rounded-2xl bg-gradient-to-b from-white via-[#FFFDFC] to-orange-50/20 border border-black/10 overflow-hidden shadow-xs">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#FF6A1A] to-[#A90F24]" aria-hidden="true" />
+              <div className="p-8">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] font-bold block mb-4">
+                  Direct Channel
+                </span>
 
-              <div className="space-y-4">
-                <div>
-                  <span className="text-xs text-[#969490] block">General & Project Inquiries</span>
-                  <a
-                    href="mailto:hello@nextaurastudios.com"
-                    className="font-heading font-bold text-lg text-[#151515] hover:text-[#A90F24] transition-colors flex items-center gap-2 mt-1"
-                  >
-                    <Mail className="w-4 h-4 text-[#A90F24]" />
-                    hello@nextaurastudios.com
-                  </a>
-                </div>
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs text-[#969490] block">General & Project Inquiries</span>
+                    <a
+                      href="mailto:hello@nextaurastudios.com"
+                      className="font-heading font-bold text-lg text-[#151515] hover:text-[#A90F24] transition-colors flex items-center gap-2 mt-1"
+                    >
+                      <div className="w-7 h-7 rounded-lg bg-[#A90F24]/10 text-[#A90F24] flex items-center justify-center border border-[#A90F24]/20 shadow-xs">
+                        <Mail className="w-4 h-4" />
+                      </div>
+                      hello@nextaurastudios.com
+                    </a>
+                  </div>
 
-                <div className="pt-4 border-t border-black/5">
-                  <span className="text-xs text-[#969490] block">Studio Location</span>
-                  <span className="text-sm font-semibold text-[#151515] mt-1 block">
-                    Distributed Global Studio
-                  </span>
-                  <span className="text-xs text-[#666462]">Operating in UTC / EST / CET</span>
+                  <div className="pt-4 border-t border-black/8">
+                    <span className="text-xs text-[#969490] block">Studio Location</span>
+                    <span className="text-sm font-semibold text-[#151515] mt-1 block">
+                      Distributed Global Studio
+                    </span>
+                    <span className="text-xs text-[#666462]">Operating in UTC / EST / CET</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#F4F4F2] border border-black/8">
-              <div className="flex items-center gap-2 mb-2 text-[#A90F24]">
-                <Sparkles className="w-4 h-4" />
-                <span className="text-xs font-mono font-bold uppercase tracking-wider">
-                  Our Response Time
-                </span>
+            <div className="rounded-2xl bg-gradient-to-br from-[#A90F24]/10 via-[#FF6A1A]/5 to-[#FFB24A]/10 border border-[#A90F24]/20 overflow-hidden shadow-xs">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] via-[#FF6A1A] to-[#FFB24A]" aria-hidden="true" />
+              <div className="p-8">
+                <div className="flex items-center gap-2 mb-2 text-[#A90F24]">
+                  <Sparkles className="w-4 h-4" />
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider">
+                    Our Response Time
+                  </span>
+                </div>
+                <p className="text-xs text-[#666462] leading-relaxed">
+                  We review submissions within 24 to 48 business hours. If your concept aligns with
+                  our active production pipeline, we will schedule an introductory technical discovery
+                  session.
+                </p>
               </div>
-              <p className="text-xs text-[#666462] leading-relaxed">
-                We review submissions within 24 to 48 business hours. If your concept aligns with
-                our active production pipeline, we will schedule an introductory technical discovery
-                session.
-              </p>
             </div>
           </div>
 
@@ -165,8 +173,10 @@ export default function ContactPage() {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="p-8 sm:p-12 rounded-3xl bg-white border border-black/8 shadow-xs space-y-8"
+                className="rounded-3xl bg-gradient-to-b from-white via-[#FFFDFC] to-orange-50/20 border border-black/10 overflow-hidden shadow-xs space-y-8 relative"
               >
+                <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] via-[#FF6A1A] to-[#FFB24A]" aria-hidden="true" />
+                <div className="p-8 sm:p-12 space-y-8">
                 {/* 1. Project Type Selector */}
                 <div>
                   <label className="block text-xs font-mono uppercase tracking-widest text-[#151515] font-bold mb-3">
@@ -320,7 +330,8 @@ export default function ContactPage() {
                     Direct transmission · No spam guarantee
                   </span>
                 </div>
-              </form>
+              </div>
+            </form>
             )}
           </div>
         </div>

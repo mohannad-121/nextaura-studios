@@ -70,46 +70,49 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </div>
 
         {/* Metadata Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 sm:p-8 rounded-2xl bg-white border border-black/8 mb-16 shadow-xs">
-          <div>
-            <span className="block text-[11px] font-mono tracking-widest uppercase text-[#969490]">
-              Category
-            </span>
-            <span className="font-heading font-bold text-sm sm:text-base text-[#151515] mt-1 block">
-              {project.categoryLabel}
-            </span>
-          </div>
-          <div>
-            <span className="block text-[11px] font-mono tracking-widest uppercase text-[#969490]">
-              Year
-            </span>
-            <span className="font-heading font-bold text-sm sm:text-base text-[#151515] mt-1 block">
-              {project.year}
-            </span>
-          </div>
-          <div>
-            <span className="block text-[11px] font-mono tracking-widest uppercase text-[#969490]">
-              Platforms
-            </span>
-            <span className="font-heading font-bold text-sm sm:text-base text-[#151515] mt-1 block">
-              {project.platforms.join(", ")}
-            </span>
-          </div>
-          <div>
-            <span className="block text-[11px] font-mono tracking-widest uppercase text-[#969490]">
-              Status
-            </span>
-            <span className="font-heading font-bold text-sm sm:text-base text-[#A90F24] mt-1 block">
-              {project.status}
-            </span>
+        <div className="rounded-2xl bg-gradient-to-r from-white via-[#FFFDFC] to-orange-50/20 border border-black/10 mb-16 shadow-xs overflow-hidden">
+          <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] via-[#FF6A1A] to-[#FFB24A]" aria-hidden="true" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 sm:p-8">
+            <div>
+              <span className="block text-[11px] font-mono tracking-widest uppercase text-[#FF6A1A] font-bold">
+                Category
+              </span>
+              <span className="font-heading font-bold text-sm sm:text-base text-[#151515] mt-1 block">
+                {project.categoryLabel}
+              </span>
+            </div>
+            <div>
+              <span className="block text-[11px] font-mono tracking-widest uppercase text-[#A90F24] font-bold">
+                Year
+              </span>
+              <span className="font-heading font-bold text-sm sm:text-base text-[#151515] mt-1 block">
+                {project.year}
+              </span>
+            </div>
+            <div>
+              <span className="block text-[11px] font-mono tracking-widest uppercase text-[#FF7424] font-bold">
+                Platforms
+              </span>
+              <span className="font-heading font-bold text-sm sm:text-base text-[#151515] mt-1 block">
+                {project.platforms.join(", ")}
+              </span>
+            </div>
+            <div>
+              <span className="block text-[11px] font-mono tracking-widest uppercase text-[#FFB24A] font-bold">
+                Status
+              </span>
+              <span className="font-heading font-bold text-sm sm:text-base text-[#A90F24] mt-1 block">
+                {project.status}
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Hero Visual Canvas */}
-        <div className="relative w-full aspect-16/9 sm:aspect-21/9 rounded-3xl bg-gradient-to-br from-[#F4F4F2] via-[#FFFDFC] to-[#ECECEA] border border-black/8 overflow-hidden mb-20 flex items-center justify-center p-8 shadow-sm">
+        <div className="relative w-full aspect-16/9 sm:aspect-21/9 rounded-3xl bg-gradient-to-br from-[#FFF5F0] via-[#FAF0F2] to-[#FFFBF0] border border-black/10 overflow-hidden mb-20 flex items-center justify-center p-8 shadow-md">
           {/* Solar Ambient Dispersion */}
           <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0 opacity-50"
             style={{
               background: `radial-gradient(circle at 50% 50%, ${project.theme.accent} 0%, transparent 65%)`,
             }}
@@ -117,10 +120,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
           {/* Abstract Generative Graphic Centerpiece */}
           <div className="relative z-10 text-center max-w-md">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl mx-auto bg-gradient-to-tr from-[#A90F24] via-[#D52632] to-[#FF6A1A] shadow-[0_0_40px_rgba(255,106,26,0.3)] flex items-center justify-center mb-6">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl mx-auto bg-gradient-to-tr from-[#A90F24] via-[#D52632] to-[#FF6A1A] shadow-[0_0_40px_rgba(255,106,26,0.4)] flex items-center justify-center mb-6">
               <Sparkles className="w-10 h-10 text-white animate-pulse" />
             </div>
-            <p className="font-mono text-xs tracking-widest uppercase text-[#666462]">
+            <p className="font-mono text-xs tracking-widest uppercase text-[#A90F24] font-bold">
               NEXTAURA STUDIOS · ARCHITECTURE VISUALIZATION
             </p>
             <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#151515] mt-2">
@@ -133,37 +136,47 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-20 border-b border-black/8">
           {/* Left Summary & Specs */}
           <div className="lg:col-span-4 space-y-8">
-            <div className="p-6 rounded-2xl bg-white border border-black/8">
-              <h4 className="text-xs font-mono uppercase tracking-widest text-[#969490] mb-4 flex items-center gap-2">
-                <Cpu className="w-4 h-4 text-[#FF6A1A]" />
-                Technology Stack
-              </h4>
-              <ul className="space-y-2">
-                {project.technologies.map((tech) => (
-                  <li
-                    key={tech}
-                    className="flex items-center gap-2 text-sm font-medium text-[#151515]"
-                  >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#A90F24]" />
-                    {tech}
-                  </li>
-                ))}
-              </ul>
+            <div className="rounded-2xl bg-gradient-to-b from-white via-[#FFFDFC] to-orange-50/20 border border-black/10 overflow-hidden shadow-xs">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#FF6A1A] to-[#A90F24]" aria-hidden="true" />
+              <div className="p-6">
+                <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF6A1A] mb-4 flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-md bg-[#FF6A1A]/10 flex items-center justify-center border border-[#FF6A1A]/20">
+                    <Cpu className="w-3.5 h-3.5 text-[#FF6A1A]" />
+                  </div>
+                  Technology Stack
+                </h4>
+                <ul className="space-y-2.5">
+                  {project.technologies.map((tech) => (
+                    <li
+                      key={tech}
+                      className="flex items-center gap-2.5 text-sm font-semibold text-[#151515]"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-[#A90F24]" />
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             {project.metrics && (
-              <div className="p-6 rounded-2xl bg-[#F4F4F2] border border-black/8">
-                <h4 className="text-xs font-mono uppercase tracking-widest text-[#969490] mb-4 flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-[#A90F24]" />
-                  Engine Metrics
-                </h4>
-                <div className="space-y-3">
-                  {project.metrics.map((m) => (
-                    <div key={m.label} className="flex justify-between items-center text-xs">
-                      <span className="text-[#666462]">{m.label}</span>
-                      <span className="font-mono font-bold text-[#151515]">{m.value}</span>
+              <div className="rounded-2xl bg-gradient-to-br from-[#A90F24]/8 via-[#FF6A1A]/5 to-[#FFB24A]/10 border border-[#A90F24]/20 overflow-hidden shadow-xs">
+                <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] via-[#FF6A1A] to-[#FFB24A]" aria-hidden="true" />
+                <div className="p-6">
+                  <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#A90F24] mb-4 flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-md bg-[#A90F24]/10 flex items-center justify-center border border-[#A90F24]/20">
+                      <Layers className="w-3.5 h-3.5 text-[#A90F24]" />
                     </div>
-                  ))}
+                    Engine Metrics
+                  </h4>
+                  <div className="space-y-3">
+                    {project.metrics.map((m) => (
+                      <div key={m.label} className="flex justify-between items-center text-xs">
+                        <span className="text-[#666462]">{m.label}</span>
+                        <span className="font-mono font-bold text-[#A90F24] px-2 py-0.5 rounded-md bg-white border border-[#A90F24]/20 shadow-xs">{m.value}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}

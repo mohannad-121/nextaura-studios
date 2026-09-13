@@ -41,25 +41,28 @@ export function FeaturedProjects() {
           ))}
         </div>
 
-        {/* Bottom Banner */}
-        <div className="mt-16 p-8 rounded-2xl bg-[#FAF9F6] border border-black/8 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4 text-center sm:text-left">
-            <div className="w-10 h-10 rounded-full bg-[#A90F24]/10 flex items-center justify-center text-[#A90F24] font-bold text-sm shrink-0">
-              NA
+        {/* Bottom Banner Card */}
+        <div className="mt-16 rounded-2xl bg-gradient-to-r from-white via-[#FFFDFC] to-orange-50/30 border border-black/10 hover:border-[#FF6A1A]/50 transition-all duration-500 overflow-hidden shadow-xs hover:shadow-[0_16px_36px_-8px_rgba(255,106,26,0.15)]">
+          <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] via-[#FF6A1A] to-[#FFB24A]" aria-hidden="true" />
+          <div className="p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#A90F24] via-[#D52632] to-[#FF6A1A] text-white font-bold text-base flex items-center justify-center shrink-0 shadow-md">
+                NA
+              </div>
+              <div>
+                <p className="font-heading font-bold text-base text-[#151515]">
+                  Have a proprietary concept in mind?
+                </p>
+                <p className="text-xs text-[#666462] mt-0.5">
+                  We partner with select founders, brands, and creative teams to build new digital products.
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="font-heading font-bold text-base text-[#151515]">
-                Have a proprietary concept in mind?
-              </p>
-              <p className="text-xs text-[#666462]">
-                We partner with select founders, brands, and creative teams to build new digital products.
-              </p>
-            </div>
-          </div>
 
-          <AuraButton href="/contact" variant="primary" size="sm" showArrow className="shrink-0">
-            Pitch an Idea
-          </AuraButton>
+            <AuraButton href="/contact" variant="primary" size="sm" showArrow className="shrink-0">
+              Pitch an Idea
+            </AuraButton>
+          </div>
         </div>
       </div>
     </section>

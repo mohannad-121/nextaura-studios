@@ -12,16 +12,16 @@ export function PreFooterCTA() {
 
       <div className="max-w-4xl mx-auto px-6 sm:px-10 relative z-10 flex flex-col items-center">
         {/* Solar Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-xs mb-8">
-          <span className="w-2 h-2 rounded-full bg-[#FF6A1A] animate-ping" />
-          <span className="text-xs font-mono tracking-[0.2em] uppercase text-[#151515] font-semibold">
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#D4AF37]/35 shadow-xs mb-8 backdrop-blur-md">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#FF6A1A] animate-ping" />
+          <span className="text-xs font-mono tracking-[0.22em] uppercase text-[#151515] font-bold">
             NextAura Collaboration
           </span>
         </div>
 
         {/* Monumental Editorial Headline */}
         <h2 className="font-heading font-black text-[clamp(2.4rem,6vw,5.2rem)] tracking-tight leading-[1.05] text-[#151515] uppercase max-w-3xl">
-          Got an idea worth building?
+          Got an idea worth <span className="font-serif-luxury capitalize italic solar-text-gradient font-bold">Building?</span>
         </h2>
 
         {/* Supporting Copy */}
@@ -41,7 +41,7 @@ export function PreFooterCTA() {
           </AuraButton>
         </div>
 
-        <p className="mt-8 text-xs font-mono text-[#969490]">
+        <p className="mt-8 text-xs font-mono text-[#D4AF37] font-semibold tracking-wider">
           Direct studio inquiry · Response within 24 hours
         </p>
       </div>

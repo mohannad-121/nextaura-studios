@@ -99,17 +99,17 @@ export function Footer() {
           <h2 className="font-heading font-black text-[clamp(2.8rem,11.5vw,11.5rem)] tracking-tighter leading-none text-[#151515]">
             NEXT<span className="solar-text-gradient">AURA</span>
           </h2>
-          <div className="flex items-center justify-center gap-3 sm:gap-6 mt-1">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#FF6A1A]/40 to-transparent flex-1 max-w-xs" />
-            <span className="font-mono text-xs sm:text-base tracking-[0.4em] uppercase text-[#A90F24] font-bold">
-              STUDIOS
+          <div className="flex items-center justify-center gap-3 sm:gap-6 mt-2">
+            <div className="h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent flex-1 max-w-xs" />
+            <span className="font-serif-luxury italic text-sm sm:text-lg tracking-[0.3em] uppercase text-[#D4AF37] font-semibold">
+              Crafted With Luxury Engineering
             </span>
-            <div className="h-px bg-gradient-to-r from-transparent via-[#FF6A1A]/40 to-transparent flex-1 max-w-xs" />
+            <div className="h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent flex-1 max-w-xs" />
           </div>
         </div>
 
         {/* Copyright & Ecosystem Statement */}
-        <div className="pt-8 border-t border-black/8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#666462]">
+        <div className="pt-8 border-t border-[#D4AF37]/25 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#666462]">
           <p>© {currentYear} NextAura Studios. All rights reserved.</p>
           <p className="font-medium text-[#151515]">
             Part of the <span className="font-bold text-[#151515]">NEXT<span className="solar-text-gradient">AURA</span></span> ecosystem.

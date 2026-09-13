@@ -35,30 +35,36 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-24 border-b border-black/8">
           {/* Left Column: Mission Statement */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="p-8 sm:p-10 rounded-2xl bg-white border border-black/8 shadow-xs relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-[#FF6A1A]/10 to-transparent rounded-full blur-2xl pointer-events-none" />
-              <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] font-bold block mb-3">
-                Core Premise
-              </span>
-              <h3 className="font-heading font-bold text-2xl text-[#151515] mb-4">
-                Software is not passive decor.
-              </h3>
-              <p className="text-sm text-[#666462] leading-relaxed">
-                Most digital products are designed like paperwork with glass surfaces. We treat
-                every screen as an instrument—where visual temperature, physical resistance, sound,
-                and kinetic motion form an undivided sensory whole.
-              </p>
+            <div className="rounded-2xl bg-gradient-to-b from-white via-[#FFFDFC] to-orange-50/20 border border-black/10 shadow-xs relative overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_-10px_rgba(255,106,26,0.15)]">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#FF6A1A] via-[#A90F24] to-[#FFB24A]" aria-hidden="true" />
+              <div className="p-8 sm:p-10 relative z-10">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-[#FF6A1A]/15 to-transparent rounded-full blur-2xl pointer-events-none" />
+                <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] font-bold block mb-3">
+                  Core Premise
+                </span>
+                <h3 className="font-heading font-bold text-2xl text-[#151515] mb-4">
+                  Software is not passive decor.
+                </h3>
+                <p className="text-sm text-[#666462] leading-relaxed">
+                  Most digital products are designed like paperwork with glass surfaces. We treat
+                  every screen as an instrument—where visual temperature, physical resistance, sound,
+                  and kinetic motion form an undivided sensory whole.
+                </p>
+              </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#F4F4F2] border border-black/8">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#A90F24] font-bold block mb-3">
-                Ecosystem Context
-              </span>
-              <p className="text-sm text-[#151515] leading-relaxed">
-                Operating as the dedicated entertainment and consumer product arm of the{" "}
-                <span className="font-semibold text-[#A90F24]">NextAura</span> ecosystem, we combine
-                boutique creative agility with robust technical foundations.
-              </p>
+            <div className="rounded-2xl bg-gradient-to-r from-[#A90F24]/8 via-[#FF6A1A]/5 to-[#FFB24A]/10 border border-[#A90F24]/20 overflow-hidden shadow-xs">
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] to-[#FF6A1A]" aria-hidden="true" />
+              <div className="p-8">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#A90F24] font-bold block mb-3">
+                  Ecosystem Context
+                </span>
+                <p className="text-sm text-[#151515] leading-relaxed">
+                  Operating as the dedicated entertainment and consumer product arm of the{" "}
+                  <span className="font-bold text-[#A90F24]">NextAura</span> ecosystem, we combine
+                  boutique creative agility with robust technical foundations.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -123,22 +129,25 @@ export default function AboutPage() {
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-white border border-black/8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 shadow-xs">
-          <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] font-bold">
-              Collaborations & Inquiries
-            </span>
-            <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#151515] mt-1">
-              Want to build something memorable together?
-            </h3>
-            <p className="text-sm text-[#666462] mt-2 max-w-lg">
-              We collaborate with forward-looking founders, publishing partners, and ambitious brands.
-            </p>
-          </div>
+        <div className="mt-20 rounded-3xl bg-gradient-to-r from-white via-[#FFFDFC] to-orange-50/30 border border-black/10 overflow-hidden shadow-md transition-all duration-500 hover:shadow-[0_25px_50px_-12px_rgba(255,106,26,0.2)]">
+          <div className="h-1.5 w-full bg-gradient-to-r from-[#A90F24] via-[#FF6A1A] to-[#FFB24A]" aria-hidden="true" />
+          <div className="p-8 sm:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#FF6A1A] font-bold">
+                Collaborations & Inquiries
+              </span>
+              <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#151515] mt-1">
+                Want to build something memorable together?
+              </h3>
+              <p className="text-sm text-[#666462] mt-2 max-w-lg">
+                We collaborate with forward-looking founders, publishing partners, and ambitious brands.
+              </p>
+            </div>
 
-          <AuraButton href="/contact" variant="primary" size="lg" showArrow className="shrink-0">
-            Start a Conversation
-          </AuraButton>
+            <AuraButton href="/contact" variant="primary" size="lg" showArrow className="shrink-0">
+              Start a Conversation
+            </AuraButton>
+          </div>
         </div>
       </div>
     </div>

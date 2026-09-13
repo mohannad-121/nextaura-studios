@@ -23,19 +23,19 @@ export function Hero() {
           {/* Left / Editorial Typography */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
             {/* Top Brand Identity Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-xs mb-6 sm:mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#A90F24] animate-pulse" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-[#666462] font-semibold">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#D4AF37]/35 shadow-xs mb-6 sm:mb-8 backdrop-blur-md">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#A90F24] animate-pulse" />
+              <span className="text-[11px] font-mono tracking-[0.22em] uppercase text-[#666462] font-semibold">
                 Apps · Games · Digital Experiences
               </span>
             </div>
 
             {/* Editorial Monumental Heading */}
-            <h1 className="font-heading font-black text-[clamp(2.5rem,6.2vw,5.5rem)] tracking-[-0.035em] leading-[1.04] text-[#151515] uppercase">
+            <h1 className="font-heading font-black text-[clamp(2.6rem,6.4vw,5.6rem)] tracking-[-0.035em] leading-[1.04] text-[#151515] uppercase">
               We Build What <br />
               People Want to{" "}
               <span className="relative inline-block">
-                <span className="solar-text-gradient">Play, Use</span>
+                <span className="solar-text-gradient font-serif-luxury capitalize tracking-normal italic font-semibold">Play, Use</span>
               </span>{" "}
               <br />& Remember.
             </h1>
@@ -59,9 +59,9 @@ export function Hero() {
             </div>
 
             {/* Conceptual Quick Highlights */}
-            <div className="mt-12 pt-8 border-t border-black/8 grid grid-cols-3 gap-6 sm:gap-8 w-full max-w-lg">
+            <div className="mt-12 pt-8 border-t border-[#D4AF37]/25 grid grid-cols-3 gap-6 sm:gap-8 w-full max-w-lg">
               <div>
-                <span className="block text-[11px] font-mono tracking-widest text-[#969490] uppercase">
+                <span className="block text-[11px] font-mono tracking-widest text-[#D4AF37] font-bold uppercase">
                   Design
                 </span>
                 <span className="font-heading font-bold text-sm sm:text-base text-[#151515]">
@@ -69,7 +69,7 @@ export function Hero() {
                 </span>
               </div>
               <div>
-                <span className="block text-[11px] font-mono tracking-widest text-[#969490] uppercase">
+                <span className="block text-[11px] font-mono tracking-widest text-[#FF6A1A] font-bold uppercase">
                   Speed
                 </span>
                 <span className="font-heading font-bold text-sm sm:text-base text-[#151515]">
@@ -77,7 +77,7 @@ export function Hero() {
                 </span>
               </div>
               <div>
-                <span className="block text-[11px] font-mono tracking-widest text-[#969490] uppercase">
+                <span className="block text-[11px] font-mono tracking-widest text-[#A90F24] font-bold uppercase">
                   Philosophy
                 </span>
                 <span className="font-heading font-bold text-sm sm:text-base text-[#A90F24]">

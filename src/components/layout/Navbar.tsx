@@ -40,9 +40,9 @@ export function Navbar() {
       >
         <div
           className={cn(
-            "max-w-7xl mx-auto flex items-center justify-between rounded-full transition-all duration-300 px-5 sm:px-7",
+            "max-w-7xl mx-auto flex items-center justify-between rounded-full transition-all duration-500 px-5 sm:px-7",
             isScrolled
-              ? "bg-[#FFFDFC]/85 backdrop-blur-md border border-black/8 shadow-[0_8px_24px_rgba(21,21,21,0.04)] py-2.5"
+              ? "bg-[#FFFDFC]/90 backdrop-blur-xl border border-[#D4AF37]/35 shadow-[0_10px_30px_-5px_rgba(212,175,55,0.15),0_0_20px_rgba(169,15,36,0.1)] py-2.5"
               : "bg-transparent border border-transparent py-1"
           )}
         >
@@ -54,7 +54,7 @@ export function Navbar() {
                 alt="NextAura Studios Logo"
                 width={32}
                 height={32}
-                className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(255,106,26,0.35)]"
+                className="w-full h-full object-contain drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]"
                 priority
               />
             </div>
@@ -63,7 +63,7 @@ export function Navbar() {
               <span className="font-heading font-black text-base sm:text-lg tracking-tight text-[#151515] leading-none">
                 NEXT<span className="solar-text-gradient">AURA</span>
               </span>
-              <span className="text-[9px] font-mono tracking-[0.25em] text-[#A90F24] font-bold uppercase leading-tight mt-0.5">
+              <span className="text-[9px] font-mono tracking-[0.25em] text-[#D4AF37] font-bold uppercase leading-tight mt-0.5">
                 STUDIOS
               </span>
             </div>
