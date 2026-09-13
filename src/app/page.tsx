@@ -1,6 +1,6 @@
 import React from "react";
-import { HomeJourney } from "@/components/home/HomeJourney";
+import { SignalExperience } from "@/components/home/signal/SignalExperience";
 
 export default function HomePage() {
-  return <HomeJourney />;
+  return <SignalExperience />;
 }

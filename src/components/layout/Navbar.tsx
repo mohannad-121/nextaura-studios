@@ -29,12 +29,18 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHome = pathname === "/";
+  const shouldShowNav = !isHome || isScrolled;
+
   return (
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-4 sm:px-8",
-          isScrolled ? "py-3" : "py-5 sm:py-6"
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-500 px-4 sm:px-8",
+          isScrolled ? "py-3" : "py-5 sm:py-6",
+          shouldShowNav
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
         )}
       >
         <div
